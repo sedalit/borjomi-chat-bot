@@ -1,0 +1,680 @@
+<test>
+    <test-case id="/FAQ.Transfer/PurchaseReturn 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как я могу вернуть заказ</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/PurchaseReturn 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Возврат товара</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/PurchaseReturn 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Хочу отказаться от заказа</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/RefusalCooperation 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Отказ от сотрудничества</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/RefusalCooperation 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как расторгнуть договор с вами</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/RefusalCooperation 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Прекратите поставки</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangeAddress 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Изменить адрес доставки</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangeAddress 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Нужно привязать другой адрес к профилю</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangeAddress 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Я опечатался при заполнении адреса</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DeliveryClaim 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Жалоба на сервис доставки</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DeliveryClaim 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как связаться с курьером</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DeliveryClaim 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Курьер вёл себя ужасно</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DamageCoolerBottle 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Бутылка протекает</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DamageCoolerBottle 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Бутылка треснутая</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/DamageCoolerBottle 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Бутылка течет</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/WaterClaims 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Вода у вас некачественная</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/WaterClaims 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Плохого качества вода</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/WaterClaims 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Есть претензия к качеству воды</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangePersonalInfo 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Указать другое имя в профиле</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangePersonalInfo 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Изменить личные данные</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Transfer/ChangePersonalInfo 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Изменить почту</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/OrderDetails 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Где можно узнать о доставке</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/OrderDetails 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Узнать информацию об оплате</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/OrderDetails 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Где найти информацию об оплате</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/DeliveryDetails 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как выбрать дату и время доставки</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/Authorization 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Авторизация</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/Authorization 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как авторизоваться на сайте</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Web/Authorization 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У меня уже есть логин и пароль, как войти в личный кабинет</q>
+        <a class="/FAQ.Web"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/HowToPay 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Вопрос об оплате</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/HowToPay 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как оплачивать?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/HowToPay 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У вас можно по карте оплатить?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Delivery 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Насчёт доставки</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Delivery 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Какие условия доставки?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Delivery 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Есть ли у вас доставка?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderWater 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Заказать воду</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderWater 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Закажи мне воды</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderWater 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как заказать</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/DeliveryIntervals 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Стоимость доставки</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/DeliveryIntervals 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Сколько стоит доставка?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/DeliveryIntervals 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У вас платная доставка</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderCoolerWash 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Мне нужно почистить кулер</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderCoolerWash 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У вас можно заказать санобработку?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderCoolerWash 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Хочу заказать чистку кулера</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/PackagingDeposit 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Вы берёте залог за упаковку?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/PackagingDeposit 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Сколько залог за тару</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/LoginProblem 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Проблема со входом в аккаунт</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/LoginProblem 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Не могу зайти в личный кабинет</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/WhyRegister 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Не хочу регистрироваться на сайте</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/WhyRegister 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Регистрация на сайте обязательная?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/WhyRegister 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Зачем мне регистрироваться?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Vacansies 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как устроиться к вам на работу</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Vacansies 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У вас есть открытые вакансии?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Vacansies 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Хочу у вас работать</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/App 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>У вас есть приложение?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/App 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Где найти ваше приложение на андроид?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/App 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как еще можно сделать заказ, кроме сайта?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CoolerWash 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Насчёт санобработки</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CoolerWash 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как часто нужно делать санитарную обработку кулера?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CoolerWash 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Санитарная обработка</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CitiesWithDelivery 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>В каких городах у вас есть доставка?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CitiesWithDelivery 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Есть ли доставка во Владивостоке?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/CitiesWithDelivery 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Где доставляете?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderMinimum 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Есть ли минимальная сумма заказа?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/OrderMinimum 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Какое ограничение по количеству бутылок?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Price 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Сколько стоит боржоми</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Price 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Сколько у вас вода стоит</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/Price 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Дешевле боржоми или святой источник?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/AboutMyWaterShop 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Что такое mywatershop?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/AboutSaintSpring 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Что за святой источник?</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/FAQ.Common/AboutBorjomi 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Расскажи о боржоми</q>
+        <a class="/FAQ.Common"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+</test>

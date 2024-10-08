@@ -1,0 +1,1207 @@
+{
+  "project" : {
+    "id" : "borjomi_2-249307320-RCW",
+    "name" : "borjomi_2-249307320-RCW",
+    "folder" : "/platform"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "mystem",
+      "useShared" : false
+    },
+    "shared" : false,
+    "validation" : {
+      "phraseValidationEnabled" : true,
+      "answerValidationEnabled" : true,
+      "phraseValidationThreshold" : 0.5,
+      "answerValidationThreshold" : 0.8
+    }
+  },
+  "intents" : [ {
+    "path" : "/Как зарегистрироваться",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Хочу зарегистрироваться"
+    }, {
+      "text" : "Регистрация на сайте"
+    }, {
+      "text" : "Про регистрацию на сайте"
+    }, {
+      "text" : "Восстановить пароль"
+    }, {
+      "text" : "Потерял учетные данные"
+    }, {
+      "text" : "Не могу вспомнить логин и пароль"
+    }, {
+      "text" : "У меня нет логина и пароля"
+    }, {
+      "text" : "Как зарегистрироваться на сайте"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(забыл*|потерял*|нет|отсутствуют|не (помню|знаю|могу *)) * (логин|пароль|данные)} *", "* {~регистрация * [~сайт]} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/HowToPay",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "У вас можно по карте оплатить?"
+    }, {
+      "text" : "Доступные варианты оплаты для юр.лиц"
+    }, {
+      "text" : "Через электронный кошелёк оплату принимаете"
+    }, {
+      "text" : "У курьера есть терминал"
+    }, {
+      "text" : "Есть безнал"
+    }, {
+      "text" : "Как оплачивать"
+    }, {
+      "text" : "Оплата"
+    }, {
+      "text" : "HowToPay"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(*платить/*плат*/оплач*/принима*/~доставка/перевод/перевести) * (деньги/денег)} *", "* {(*платить/*плата/оплач*) * (~заказ/~доставка/получ*/карт*/терминал*/~электронный кошел*/сбер*/(по/через) (инет*/интернет*))} *", "* {([способ*] ~оплата/как * (*плат*/оплач*)) * ~доставка} *", "* ([способ*] ~оплата/как * (*плат*/оплач*)/безнал*/карт*/терминал*/~электронный кошел*/сбер*/(по/через) (инет*/интернет*)) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/OrderCoolerWash",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Заказать санитарную обработку кулера"
+    }, {
+      "text" : "Заказать санобработку"
+    }, {
+      "text" : "Заказать чистку кулера"
+    }, {
+      "text" : "Нужно почистить кулер"
+    }, {
+      "text" : "OrderCoolerWash"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(нужно/нужн*/надо/необходим*/требу*/~хотеть/можно/~мочь/заказ*/вызвать/~вызов) * @sanitization * [@cooler]} *", "* {([~какой] ~цена/сколько * (стоит*/*плат*/должен/должн*)/~стоимость/бесплат*/расценк*/~плата/прайс*/обой*)  * [заказ*] @sanitization  * [@cooler]} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/Vacansies",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Хочу работать у вас"
+    }, {
+      "text" : "У вас есть открытые вакансии?"
+    }, {
+      "text" : "Как у вас работать"
+    }, {
+      "text" : "Узнать вакансии"
+    }, {
+      "text" : "Как можно устроиться к вам на работу"
+    }, {
+      "text" : "Vacansies"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(треб*|нужн*|нужен|ищете|треб*) (~человек)} *", "* {(устрои*|ищу|треб*) * (работ*)} *", "* {(устрои*|работать|ищете|треб*|стать|нужн*|нужен) * (сотрудник*|сотрудниц*|~персонал|~рабочий)} *", "* {(у вас|ваш* компании|к вам) * (*работать|устрои*)} *", "* (ваканс*/работ*/трудоустро*|резюме|ищу работ*) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/CitiesWithDelivery",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Где доставляете"
+    }, {
+      "text" : "В какие города есть доставка"
+    }, {
+      "text" : "В каких регионах есть доставка"
+    }, {
+      "text" : "В каких городах можно заказать воду на дом"
+    }, {
+      "text" : "CitiesWithDelivery"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(@pymorphy.geox|*област*|~страна|~деревня|насел* пункт*) * (@deliver/заказ*/*возите)} *", "* {(город*/регион*/где*/куда) * (@deliver/заказ*)} *", "* вы доставляете (в|во) * @pymorphy.geox *", "* есть ли доставка (в|во) * @pymorphy.geox *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/OrderMinimum",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Ограничение по количеству бутылок"
+    }, {
+      "text" : "На сколько минимум надо заказать доставку"
+    }, {
+      "text" : "Есть ли минимальная сумма заказа"
+    }, {
+      "text" : "OrderMinimum"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(огранич*/лимит*) * (заказ*/товар*/бутыл*)} *", "* {@minSum * @deliver} ", "* {на (сколько/как* сум*) * @deliver} *", "* {(миним*|наименьш*|~самый ~маленький|~какой ~самый ~дешевый) * заказ*} *", "* {@minSum * заказ*} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/AboutMyWaterShop",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "О компании mywatershop"
+    }, {
+      "text" : "Что такое mywatershop"
+    }, {
+      "text" : "AboutMyWaterShop"
+    }, {
+      "text" : "О MyWaterShop"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* ((о|про) [~ваш] (производител*/компани*/компани*)) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Web",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/PurchaseReturn",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "PurchaseReturn"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (оформ* * ~возврат) *", "* {(вернуть/возвратить/~возврат/отказаться/~отказ) * (~товар/~заказ)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/RefusalCooperation",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "как расторгнуть?"
+    }, {
+      "text" : "прекратить поставки"
+    }, {
+      "text" : "Отказ от сотрудничества"
+    }, {
+      "text" : "RefusalCooperation"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* отказ* * сотруднич*", "* (прекрат*/остан*/хват*/прекращ*/отмен*/разорв*/отказ*) * (постав*/сотруднич*/~договор) *", "* (забер*/забр*/зап*/~сдать/растор*/забор*/возьми*) * (тар*/бут*/оборуд*/контракт*/догов*/сотруднич*) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/DeliveryClaim",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Доставили воду хочу поговорить с оператором"
+    }, {
+      "text" : "Связаться с курьером"
+    }, {
+      "text" : "Недовольство курьером"
+    }, {
+      "text" : "Жалоба на доставку"
+    }, {
+      "text" : "DeliveryClaim"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {достав* * (*говор*/соединит*/общаться/переключ*/связаться) * (человек*/оператор*)} *", "* {(достав*/курьер*) * (телефон*)} *", "* {(претензи*/жалоб*/*жалов*/недовольств*/не довол*/недовол*/обсудить/связаться) * (достав*/курьер*)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/WaterClaims",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Плохое качество"
+    }, {
+      "text" : "Некачественная вода"
+    }, {
+      "text" : "Претензия на качество воды"
+    }, {
+      "text" : "WaterClaims"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(@bad [~качество]/не нравится/не понрав*/так себе) * @water} " ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/Delivery",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Расскажи про доставку"
+    }, {
+      "text" : "Условия доставки"
+    }, {
+      "text" : "Есть ли доставка"
+    }, {
+      "text" : "Delivery"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {@deliver * [офис*/дом*/работ*/есть[ли]/дач*]} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common",
+    "enabled" : false,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/OrderWater",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Закажи мне воды"
+    }, {
+      "text" : "Как заказать воду"
+    }, {
+      "text" : "Хочу заказать воду"
+    }, {
+      "text" : "OrderWater"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (как|~хотеть) @makeOrder *", "* {(закажи|закажите|(как|~хотеть) * @makeOrder) * @allWaters} *", "* {заказ* @allWaters} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/DeliveryIntervals",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Доставка у вас платная?"
+    }, {
+      "text" : "Сколько за доставку платить"
+    }, {
+      "text" : "Почём доставка"
+    }, {
+      "text" : "Сколько стоит доставка"
+    }, {
+      "text" : "Стоимость доставки"
+    }, {
+      "text" : "DeliveryIntervals"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/PackagingDeposit",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Берете залог за упаковку"
+    }, {
+      "text" : "Залог за тару"
+    }, {
+      "text" : "PackagingDeposit"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(берете/есть) * (залог*|~депозит)} *", "* {(~тара/~упаковка/~бутылка/~бутылью/бутыл*) * (залог*|~депозит|*даете)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/LoginProblem",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Не могу войти в личный кабинет"
+    }, {
+      "text" : "Проблема со входом в аккаунт"
+    }, {
+      "text" : "LoginProblem"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(@personalCabinet) * (проблем*/не) (зайти/войти/авториз*/попасть/пуск*)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/WhyRegister",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Регистрация на сайте обязательна?"
+    }, {
+      "text" : "Зачем надо регистрироваться"
+    }, {
+      "text" : "Можно не регистрировать личный кабинет"
+    }, {
+      "text" : "Не хочу регистрироваться на сайте"
+    }, {
+      "text" : "WhyRegister"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(не (хоч*/буду/могу/собир*/планир*)/нет в план*/можно не/зачем/@makeOrder/обязательн*/достав*) * (*регистр*/*регестр*) * [~сайт]} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/App",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Где найти приложение ваше"
+    }, {
+      "text" : "У вас есть приложение"
+    }, {
+      "text" : "Как еще можно сделать заказ, если не через сайт"
+    }, {
+      "text" : "App"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (~приложение|приложух*|прилажк*|приложен*) *", "* {@makeOrder *  ((с|по) телефон*)} *", "* {@makeOrder *  (не|только) * (через сервис/(на/через) ~сайт)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/CoolerWash",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Насчёт санобработки"
+    }, {
+      "text" : "Как часто делать санобработку кулеров"
+    }, {
+      "text" : "Санитарная обработка кулеров"
+    }, {
+      "text" : "CoolerWash"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {@cooler * @sanitization} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/Price",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Дешевле боржоми или святой источник?"
+    }, {
+      "text" : "Сколько стоит Святой источник"
+    }, {
+      "text" : "Сколько стоит ваша вода"
+    }, {
+      "text" : "Сколько стоит Боржоми"
+    }, {
+      "text" : "Price"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {[сколько|как*] * (прайс|прайс-лист) * [@allWaters|~бутылка|~банка]} *", "* {[сколько|как*] * (цен*|~стоить|~стоимость|почем|по чем) * (@allWaters|~бутылка|~банка)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/AboutSaintSpring",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "о воде святой источник"
+    }, {
+      "text" : "что такое святой источник"
+    }, {
+      "text" : "AboutSaintSpring"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (о/расскаж*/узнать/инфо*/подробн*) * @saintSpring *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Common/Root/AboutBorjomi",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "о воде боржоми"
+    }, {
+      "text" : "что такое боржоми"
+    }, {
+      "text" : "AboutBorjomi"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* (о/расскаж*/узнать/инфо*/подробн*) * @borjomi *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Web/Root/OrderDetails",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Где можно узнать об оплате"
+    }, {
+      "text" : "Где можно узнать о доставке"
+    }, {
+      "text" : "OrderDetails"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {сумма (не соответствует/другая/не та/неверн*/не верн/неправильн*/не правильн*)} *", "* заказ* (ожидает оплаты/в ожидании оплаты) *", "* {(сегодня/в какое время/во сколько) * (будет доставк*|ждать доставк*|доставят|привезет|привезут)} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Web/Root/DeliveryDetails",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как выбрать дату и время доставки"
+    }, {
+      "text" : "DeliveryDetails"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(заказать/сделать заказ*/привез*/достав*) * [на]} *", "* {(выбрать/указать/настроить/указывать/поставить) * (время/дату/день/срок) * [доставк*]} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Web/Root/Authorization",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как авторизоваться на сайте"
+    }, {
+      "text" : "Как войти в личный кабинет"
+    }, {
+      "text" : "Как войти"
+    }, {
+      "text" : "У меня уже есть логин и пароль"
+    }, {
+      "text" : "Как авторизоваться"
+    }, {
+      "text" : "авторизация"
+    }, {
+      "text" : "Authorization"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(как/где) * (войти/вход)} *", "* (личный кабинет/лк/вход) *", "* (авторизац*/авторизовать*) *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/ChangeAddress",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Поменять адрес доставки"
+    }, {
+      "text" : "Нужно изменить адрес"
+    }, {
+      "text" : "Я опечатался при заполнении адреса"
+    }, {
+      "text" : "Опечатка в адресе доставки"
+    }, {
+      "text" : "Привязать другой адрес"
+    }, {
+      "text" : "Изменить адрес доставки"
+    }, {
+      "text" : "ChangeAddress"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(ошиб*/опечат*) * [ввод*] * @delivery * [как] @change} *", "* {@change * @delivery} *", "* {(ошиб*/опечат*) * @delivery} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/DamageCoolerBottle",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Бутылка течет"
+    }, {
+      "text" : "DamageCoolerBottle"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {бутыл* * @damaged} *" ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Transfer/Root/ChangePersonalInfo",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "указать новый номер телефона"
+    }, {
+      "text" : "изменить фио"
+    }, {
+      "text" : "изменить личные данные"
+    }, {
+      "text" : "ChangePersonalInfo"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ "* {(указать/добавить/написать/привязать) * (~новый/~другой) * @personalInfo} *", "* {@change * @personalInfo} *", "* {(изменить|указать) * @personalInfo} *" ],
+    "priority" : 0
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "orderNumber",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "$regexp<[0-9]{8}>" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "deliver",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~привезти/~привозить/~доставка/~доставить/~доставлять)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "summa",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~сумма|сума|сумы|сумой|суме|стоимост*)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "makeOrder",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~заказ|~заказать|~заказывать|(*дела*|сделать) заказ*|~купить|~покупать|~приобрести|~приобретать)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "allWaters",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(@water|@borjomi|@saintSpring|эдельвейс*|минеральн* @water|минералк*|минералочк*)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "saintSpring",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~святой ~источник|св источник*|saint spring|свят* источник*|источник*|СИ)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "change",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(поменять/изменить/сменить/изменил*/сменил*/поменял*/смена/исправить/поправить)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "damaged",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "течет", "протекает", "пропускает воду", "подтекает", "треснутая", "дырявая" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "personalInfo",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "фио", "номер", "телефон", "почта", "email", "имейл", "имя", "фамилия", "отчество" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "water",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~вода|~водичка|~водица|~водища|~водяра|вада)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "minSum",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "({(миним*|наименьш*|самая маленькая) @summa}|минимум)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "cooler",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(кулер*/куллер*)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "sanitization",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(~чистить/почистить/*чистк*/~мыть/мытье/мойка/сан обработк*/санобработк*/обработк*/санитарн* обработк*/обработать/обрабат*/~гигиена)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "personalCabinet",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "(личн* кабинет*/лк)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "borjomi",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "((боржом*|баржом*) [(минер*|менер*) вод*]|минералк*|менералк*|(минер*|менер*) вод*|borjomi)" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "bad",
+      "enabled" : false,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "pattern",
+      "rule" : [ "[(очень|весьма|как-то|что-то)] (грустн*|плох*|хренов*|херов*|ужас*|невыносим*|ниочём|хуёво|не очень|неочень|отстой*|отврат*|нехорош*|мерзк*)" ],
+      "value" : ""
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "pymorphy.geox", "duckling.number", "duckling.phone-number" ],
+  "spellerDictionary" : [ ],
+  "systemEntities" : [ {
+    "name" : "mystem.geo",
+    "enabled" : false
+  }, {
+    "name" : "mystem.persn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.obsc",
+    "enabled" : false
+  }, {
+    "name" : "mystem.patrn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.famn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.romn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.latn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.numb",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.intg",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.abbr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.name",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.surn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.patr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.geox",
+    "enabled" : true
+  }, {
+    "name" : "pymorphy.orgn",
+    "enabled" : false
+  }, {
+    "name" : "duckling.number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.ordinal",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.distance",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.date",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time-of-day",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.duration",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.phone-number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.email",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.url",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "mlps-obscene.obscene",
+    "enabled" : false
+  }, {
+    "name" : "zb.datetime",
+    "enabled" : false
+  }, {
+    "name" : "zb.number",
+    "enabled" : false
+  } ],
+  "faq" : [ {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/HowToPay",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Оплатить заказ можно любым удобным для вас способом:   \n- банковской картой онлайн при оформлении заказа на сайте; \n- через электронные кошельки, интернет-банкинг или систему Сбербанк Онлайн; \n- для юридических лиц – доступна оплата по счету",
+      "markup" : "plain",
+      "key" : "_614xuv5w4"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/OrderCoolerWash",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Заказать санитарную обработку вашего кулера вы можете на сайте в разделе Услуги. На время обработки мы предоставляем подменное оборудование \n\nСтоимость санитарной обработки кулера составляет от 2100 рублей",
+      "markup" : "plain",
+      "key" : "_uzysl9zrw"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/Vacansies",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Узнать о вакансиях в нашей компании вы можете, перейдя на официальную страницу компании на сайте hh.ru по <a href=\"https://hh.ru/employer/6\" target=\"_blank\">ссылке</a>&nbsp;<br><br>Кроме того, своё резюме вы можете прислать на почту: <a href=\"//mailto:resume@ids-borjomi.ru\" target=\"_blank\">resume@ids-borjomi.ru</a>",
+      "markup" : "html",
+      "key" : "_uwhdrsmpt"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/CitiesWithDelivery",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Доставка воды и сопутствующих товаров осуществляется в Москве, Московской области, Санкт-Петербурге, Новосибирске, Екатеринбурге, Омске, Томске, Тюмени, Кемерово&nbsp;<br><br>Проверить осуществляется ли доставка по вашему адресу и узнать минимальную сумму заказа можно в <a href=\"https://mywatershop.ru/account/login?ReturnUrl=%2fprofile&amp;/Account/Login\" target=\"_blank\">личном кабинете</a>&nbsp;после <a href=\"https://mywatershop.ru/profile/register\" target=\"_blank\">регистрации</a>&nbsp;на сайте",
+      "markup" : "html",
+      "key" : "_townhgnwe"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/OrderMinimum",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Стоимость доставки определяется действующей коммерческой политикой компании и зависит от адреса доставки и суммы минимального заказа&nbsp;<br><br>Минимальная сумма заказа для бесплатной доставки для Центрального Федерального округа составляет – 2750 руб. для физических лиц и 4500 руб. для юридических лиц. Для остальных регионов минимальный размер заказа для бесплатной доставки составляет – 1950 руб. для физических лиц и 3150 руб. для юридических лиц&nbsp;<br><br>Стоимость платной доставки в Центральном Федеральном округе начисляется при сумме заказа, меньше минимальной и составляет 150 руб., включая НДС. Стоимость платной доставки в остальных регионах составляет 100 руб. с учетом НДС. Подробнее вы можете узнать в <a href=\"https://mywatershop.ru/account/login?ReturnUrl=%2fprofile&amp;/Account/Login\" target=\"_blank\">личном кабинете</a>",
+      "markup" : "html",
+      "key" : "_28a3xwc18"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/AboutMyWaterShop",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "MyWatershop – сервис доставки воды домой или в офис от компании IDS Borjomi Russia&nbsp;<br><br>Компания IDS Borjomi Russia – лидер и одна из самых динамично развивающихся компаний на рынке бутилированной воды в России. Является производителем питьевой воды «Святой Источник» и официальным дистрибьютором минеральной воды «Боржоми»&nbsp;<br><br>Дистрибуционная структура компании – одна из самых крупных и развитых в России. Это – сеть собственных филиалов, расположенных в стратегически важных городах страны, а также большое количество торговых партнеров. Отлаженная система логистики позволяет обеспечить быстрые и бесперебойные поставки продукции для каждой торговой компании, сотрудничающей с IDS Borjomi Russia",
+      "markup" : "html",
+      "key" : "_2tu2x9nen"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Web",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/PurchaseReturn",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/RefusalCooperation",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/DeliveryClaim",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/WaterClaims",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/Delivery",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "На сайте MyWatershop вы можете заказать воду на дом, в офис или на дачу. Мы используем собственную автоматизированную систему управления процессом доставки   \n\nСегодня наша доставка ограничена следующими регионами: Москва, Московская область, Новосибирск, Екатеринбург, Омск, Томск, Тюмень, Кемерово   \n\nЕсли в списке нет вашего города – не расстраивайтесь! Мы постоянно развиваемся и в скором времени сделаем доставку доступной для всей России",
+      "markup" : "plain",
+      "key" : "_9eeywo9gy"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/OrderWater",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Заказать воду «Святой Источник», «Боржоми» и сопутствующие товары можно в любое удобное для вас время:&nbsp;<br><br>- на сайте <a href=\"//mywatershop.ru\" target=\"_blank\">MyWatershop</a><br>&nbsp;- по единому номеру <a href=\"//tel:+78002501133\" target=\"_blank\">8-800-250-11-33</a><br>&nbsp;- через наше бесплатное мобильное приложение MyWatershop<br>",
+      "markup" : "html",
+      "key" : "_zsikjl0pl"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/DeliveryIntervals",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Стоимость доставки определяется действующей коммерческой политикой компании и зависит от адреса доставки и суммы минимального заказа&nbsp;<br><br>Минимальная сумма заказа для бесплатной доставки для Центрального Федерального округа составляет – 2750 руб. для физических лиц и 4500 руб. для юридических лиц. Для остальных регионов минимальный размер заказа для бесплатной доставки составляет – 1950 руб. для физических лиц и 3150 руб. для юридических лиц&nbsp;<br><br>Стоимость платной доставки в Центральном Федеральном округе начисляется при сумме заказа, меньше минимальной и составляет 150 руб., включая НДС. Стоимость платной доставки в остальных регионах составляет 100 руб. с учетом НДС. Подробнее вы можете узнать в <a href=\"https://mywatershop.ru/account/login?ReturnUrl=%2fprofile&amp;/Account/Login\" target=\"_blank\">личном кабинете</a>",
+      "markup" : "html",
+      "key" : "_fl7ltr45z"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/PackagingDeposit",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "При заключении договора, мы не берем залог за тару. Заключить договор может и физическое, и юридическое лицо   \n\nПри заказе воды без договора залог за одну бутыль составляет 800 рублей. Пустая тара 19 л. не поставляется",
+      "markup" : "plain",
+      "key" : "_wr06eube6"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/LoginProblem",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Самая распространенная причина проблем со входом - неправильный ввод пароля. Обратите внимание, что символы в пароле необходимо вводить с учетом регистра&nbsp;<br><br>Если вы не помните пароль, воспользуйтесь функцией его <a href=\"https://mywatershop.ru/account/restorepassword\" target=\"_blank\">восстановления</a>&nbsp;<br><br>Иногда некоторые браузеры некорректно обрабатывают процедуры работы с сайтом. Чтобы исправить эту ошибку, вы можете зайти с другого браузера или почистить кэш текущего браузера&nbsp;<br><br>Если вы ввели правильный пароль, но авторизация не происходит, пожалуйста, напишите Позвать оператора для связи со специалистом",
+      "markup" : "html",
+      "key" : "_nq2aqcz9l"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/WhyRegister",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "При регистрации на сайте создается учетная запись, в которой собирается информация о заказах, балансе счета и бонусов, акциях, количестве бутылей на руках и т.д. Все эти данные используются для оформления договора, планирования, осуществления доставки, информирования клиента о статусе заказа и других важных событиях&nbsp;<br><br>С помощью личного кабинета вы можете самостоятельно, без помощи оператора, оформлять заказы на доставку воды и сопутствующих товаров оперативно, удобно и легко&nbsp;<br><br>Кроме того, вам становятся доступны персональные предложения и акции, которые действуют только на сайте!&nbsp;<br><br>Если вы все же не хотите регистрироваться, вы можете воспользоваться функцией Быстрый заказ на нашем <a href=\"//mywatershop.ru\" target=\"_blank\">сайте</a>",
+      "markup" : "html",
+      "key" : "_8cmxhp6jt"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/App",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Наше мобильное приложение MyWatershop можно скачать в <a href=\"https://apps.apple.com/ru/app/my-water-shop-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7-%D0%B2%D0%BE%D0%B4%D1%8B/id1215555403\" target=\"_blank\">AppStore</a>&nbsp;или <a href=\"https://play.google.com/store/apps/details?id=com.gb65.noringa\" target=\"_blank\">Google Play</a>&nbsp;<br><br>К личному кабинету приложения подходят данные вашего аккаунта на <a href=\"//mywatershop.ru\" target=\"_blank\">сайте</a>",
+      "markup" : "html",
+      "key" : "_2iyxtnovf"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/CoolerWash",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Санитарную обработку кулеров необходимо делать не реже одного раза в 6 месяцев, а в детских и медицинских учреждениях – не менее одного раза в 3 месяца&nbsp;<br><br>Санобработка кулеров производится на производственных комплексах компании по жестким стандартам. Заказать санитарную обработку вашего кулера можно также на нашем сайте при очередном заказе воды&nbsp;<br><br>За санитарную обработку взимается дополнительная плата согласно коммерческой политике компании на дату оформления заказа. Стоимость санитарной обработки составляет от 2100 рублей",
+      "markup" : "html",
+      "key" : "_nnopcn963"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/Price",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Со стоимостью воды и других товаров вы можете ознакомиться в каталоге на сайте <a href=\"https://mywatershop.ru/\" target=\"_blank\">MyWaterShop</a>",
+      "markup" : "html",
+      "key" : "_4ow3nyuom"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/AboutSaintSpring",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Святой Источник» — питьевая вода, которая добывается из артезианских скважин. Тщательный подход к выбору источников позволил использовать современные щадящие методы фильтрации, не меняющие структуру воды. Благодаря этому в воде «Святой Источник» сохраняется оптимальное содержание солей и микроэлементов, полезных для человека&nbsp;<br><br>Подробнее о своей индивидуальной норме потребления воды в зависимости от Ваших параметров и ежедневной активности можно узнать на <a href=\"https://svyatoyistochnik.com/\" target=\"_blank\">сайте</a>&nbsp;С 2015 года «Святой Источник» — бесспорный лидер рынка, бренд бутилированной воды, который выбирает большинство россиян (по данным компании Nielsen)",
+      "markup" : "html",
+      "key" : "_185ivfsfc"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Common/Root/AboutBorjomi",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "«Боржоми» — легендарная минеральная вода, которую знают и любят миллионы людей по всему миру&nbsp;<br><br>Каждая капля этой воды — бесценна: «Боржоми» зарождается в вулканических глубинах Грузии, проходит многие километры до земной поверхности, по пути обогащаясь уникальными минералами и затем добывается из источников Боржомской долины максимально бережно — разливается лишь то количество воды, которое возобновляется естественным образом&nbsp;<br><br>Подробнее о минеральной воде «Боржоми» — на <a href=\"//www.borjomi.com\" target=\"_blank\">сайте</a>",
+      "markup" : "html",
+      "key" : "_l1588l1jh"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Web/Root/OrderDetails",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Информация о доставке, оплате, возврате товара для удобства клиентов размещена на нашем сайте в разделе «<a href=\"https://mywatershop.ru/home/buyersinfo\" target=\"_blank\">Покупателям</a>»<br><br>Также внизу страницы сайта можно найти информацию о компании, бонусной программе, сервисном обслуживании, последние новости, ссылки на странички компании в социальных сетях, контактные данные и другую полезную информацию",
+      "markup" : "html",
+      "key" : "_bg0b8k0tu"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Web/Root/DeliveryDetails",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "По умолчанию устанавливается ближайшая дата по графику доставки клиента&nbsp;<br><br>Вы можете её изменить. Для этого необходимо <a href=\"https://mywatershop.ru/profile/register\" target=\"_blank\">зарегистрироваться</a>&nbsp;или <a href=\"https://mywatershop.ru/account/login?ReturnUrl=%2fprofile&amp;/Account/Login\" target=\"_blank\">войти</a>&nbsp;в личный кабинет. После входа в систему, вы увидите свой заказ и сможете отредактировать его дату и время во 2-ом пункте, выбрав подходящий интервал доставки из доступных",
+      "markup" : "html",
+      "key" : "_9rsw9nn57"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Web/Root/Authorization",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "Вы можете авторизоваться на сайте. Для этого перейдите по <a href=\"https://mywatershop.ru/account/login?ReturnUrl=%2fprofile&amp;/Account/Login\" target=\"_blank\">ссылке</a>&nbsp;или нажмите на вкладку Войти на сайте <a href=\"//mywatershop.ru\" target=\"_blank\">MyWaterShop.ru</a>",
+      "markup" : "html",
+      "key" : "_5xp5vs7l6"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/ChangeAddress",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/DamageCoolerBottle",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Transfer/Root/ChangePersonalInfo",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "",
+      "markup" : "plain"
+    } ]
+  } ],
+  "skills" : [ ]
+}

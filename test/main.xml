@@ -1,0 +1,69 @@
+<test>
+    <test-case id="Start">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+    </test-case>
+    
+    <test-case id="/HowCanIHelpYou/Fallback">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>ываываываываыва</q>
+        <a state="/HowCanIHelpYou/Fallback"/>
+        <q>ываываываываыва</q>
+        <a state="/HowCanIHelpYou/Fallback"/>
+        <q>ываываываываыва</q>
+        <a state="/HowCanIHelpYou/Fallback"/>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/HowToRegistrate 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Как зарегистрироваться на сайте</q>
+        <a state="/HowToRegistrate"/>
+        <q>через сайт хочу</q>
+        <a state="/HowToRegistrate/Online"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/HowToRegistrate 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Не помню пароль для входа на ваш сайт</q>
+        <a state="/HowToRegistrate"/>
+        <q>онлайн давайте</q>
+        <a state="/HowToRegistrate/Online"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/HowToRegistrate 3">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Восстановить логин и пароль</q>
+        <a state="/HowToRegistrate"/>
+        <q>онлайн</q>
+        <a state="/HowToRegistrate/Online"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/HowToRegistrate 4">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <q>Про регистрацию на сайте</q>
+        <a state="/HowToRegistrate"/>
+        <q>Через оператора</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+</test>

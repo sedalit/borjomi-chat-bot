@@ -1,0 +1,169 @@
+<test>
+    <test-case id="/Identification/Fallback">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <q>sdfsdfsdf</q>
+        <a state="/Identification/Fallback"/>
+        <q>sdfsdfsdf</q>
+        <a state="/Identification/Fallback"/>
+        <q>sdfsdfsdf</q>
+        <a state="/Identification/Fallback"/>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/Identification Success">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456789"
+            }
+            </body>
+            <response status="204">"OK"</response>
+        </mockData>
+        <q>79123456789</q>
+        <a state="/GetNumber"/>
+        <q>login</q>
+        <a state="/GetPassword"/>
+        <mockData>
+            <query method="GET">https://mwsapi.mywatershop.ru:443/v2/Clients</query>
+            <body>{}</body>
+            <response status="200">
+                [{
+                "clientid": "1292243",
+                "name": "Иванов Иван Иванович",
+                "shortaddress": "Москва"
+                }]
+            </response>
+        </mockData>
+    </test-case>
+    
+    <test-case id="/GetNumber Error 1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456780"
+            }
+            </body>
+            <response status="404"/>
+        </mockData>
+        <q>79123456780</q>
+        <a state="/GetNumber/Question"/>
+        <q>Да</q>
+        <a state="/GetNumber/Error"/>
+        <q>Да</q>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/GetNumber Error 1.1">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456789"
+            }
+            </body>
+            <response status="404"/>
+        </mockData>
+        <q>79123456789</q>
+        <a state="/GetNumber/Question"/>
+        <q>Да</q>
+        <a state="/GetNumber/Error"/>
+        <q>Нет</q>
+        <a state="/HowToRegistrate"/>
+    </test-case>
+    
+    <test-case id="/GetNumber Error 2">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456789"
+            }
+            </body>
+            <response status="404"/>
+        </mockData>
+        <q>79123456789</q>
+        <a state="/GetNumber/Question"/>
+        <q>Нет</q>
+        <a state="/Identification"/>
+    </test-case>
+    
+    <test-case id="/GetNumber Error Fallback">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456789"
+            }
+            </body>
+            <response status="404"/>
+        </mockData>
+        <q>79123456789</q>
+        <a state="/GetNumber/Question"/>
+        <q>asdasdasdasd</q>
+        <a state="/GetNumber/Question/Fallback"/>
+        <q>asdasdasdasd</q>
+        <a state="/GetNumber/Question/Fallback"/>
+        <q>asdasdasdasd</q>
+        <a state="/GetNumber/Question/Fallback"/>
+        <a state="/TransferToOperator"/>
+    </test-case>
+    
+    <test-case id="/GetCredits Fail">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <state>Identification</state>
+        <mockData>
+            <query method="POST">https://mwsapi.mywatershop.ru:443/v2/Auth</query>
+            <body>
+            {
+                "phone": "9123456789"
+            }
+            </body>
+            <response status="204"/>
+        </mockData>
+        <q>79123456789</q>
+        <a state="/GetNumber"/>
+        <q>login</q>
+        <a state="/GetPassword"/>
+        <q>password</q>
+        <mockData>
+            <query method="GET">https://mwsapi.mywatershop.ru:443/v2/Clients</query>
+            <response status="404"/>
+        </mockData>
+        <a state="/GetCredits/Error"/>
+        <a state="/GetNumber"/>
+    </test-case>
+</test>

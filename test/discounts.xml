@@ -1,0 +1,63 @@
+<test>
+    <test-case id="/Discounts Fail">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <context var="client">
+          {
+            "id": "1292243"
+          }
+        </context>
+        <mockData>
+            <query method="GET">https://mwsapi.mywatershop.ru:443/v2/Actions</query>
+            <response status="404"/>
+        </mockData>
+        <q>Акции</q>
+        <a state="/IntegrationFailed"/>
+        <a state="/SomethingElse"/>
+    </test-case>
+    
+    <test-case id="/ShowDiscounts">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <a state="/HowCanIHelpYou"/>
+        <context var="client">
+          {
+            "id": "1292243"
+          }
+        </context>
+        <context var="session">
+          {
+            "channel": "whatsapp"
+          }
+        </context>
+        <mockData>
+            <query method="GET">https://mwsapi.mywatershop.ru:443/v2/Actions</query>
+            <response type="json">
+                [ 
+                    { 
+                        "Pictures": [ { "ContentType": "COT_PIC_ACTION", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_action.jpg" }, { "ContentType": "COT_PIC_ACTION_MAIN", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_main.jpg" }, { "ContentType": "COT_PIC_ACTION_LIST", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_list.jpg" } ],
+                        "child": [], 
+                        "Details": [], 
+                        "Id": 1, 
+                        "Name": "Акция 1", 
+                        "Type": 1, 
+                        "TypeCode": "ACWST_INFO" 
+                    }, 
+                    { 
+                        "Pictures": [ { "ContentType": "COT_PIC_ACTION", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_action.jpg" }, { "ContentType": "COT_PIC_ACTION_MAIN", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_main.jpg" }, { "ContentType": "COT_PIC_ACTION_LIST", "Path": "https://mywatershop.ru/appcontent/images/actions/mob_app/69_list.jpg" } ],
+                        "child": [], 
+                        "Details": [], 
+                        "Id": 2, 
+                        "Name": "Акция 2", 
+                        "Type": 1, 
+                        "TypeCode": "ACWST_INFO" 
+                    }
+                ]
+            </response>
+        </mockData>
+        <q>Акции</q>
+    </test-case>
+</test>
